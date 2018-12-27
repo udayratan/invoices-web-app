@@ -21,15 +21,15 @@ class SupplyClients extends React.Component {
                 // If we want text, call result.text()
                 return result.json();
             }).then((Response) => {
-                // Do something with the result
-                console.log("Response");
-                console.log(Response);
                 this.setState({ Data: Response })
             })
     }
     render() {
         const all_clients = this.state.Data.map((item, i) => (
             <tr>
+                <td>
+                    {i + 1}
+                </td>
                 <td>
                     {item.Name}
                 </td>
@@ -51,6 +51,9 @@ class SupplyClients extends React.Component {
                     <table className="table table-bordered">
                         <thead>
                             <tr>
+                                <th>
+                                    S. No
+                                </th>
                                 <th>
                                     Name
                                 </th>
