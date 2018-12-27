@@ -5,6 +5,10 @@ import Supply from './Supply/Supply';
 import Client from './Client/Client';
 import Secret from './Supply/Secret';
 import Login from './Client/Login';
+import SupplyClients from './Supply/SupplyClients';
+import SupplyProducts from './Supply/SupplyProducts';
+import SupplyInvoices from './Supply/SupplyInvoices';
+import Add_Clients from './Supply/Add_Clients';
 class App extends React.Component {
   render() {
     return (
@@ -24,10 +28,14 @@ class App extends React.Component {
           </ul>
           <hr />
           <Switch>
-            <Route path='/supply' component={Supply} />
+            <Route exact path='/supply' component={Supply} />
             <Route exact path='/secret' component={Secret} />
-            <Route path='/client' component={Client} />
+            <Route exact path='/client' component={Client} />
             <Route exact path='/login' component={Login} />
+            {/* <Route exact path='/supply/clients' component={SupplyClients} />
+            <Route exact path='/supply/products' component={SupplyProducts} />
+            <Route exact path='/supply/invoices' component={SupplyInvoices} />
+            <Route exact path='/supply/add_clients' component={Add_Clients} /> */}
           </Switch>
         </div>
       </Router>

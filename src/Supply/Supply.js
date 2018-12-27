@@ -4,6 +4,7 @@ import './Supply.css';
 import SupplyProducts from './SupplyProducts';
 import SupplyClients from './SupplyClients';
 import SupplyInvoices from './SupplyInvoices';
+import Add_Clients from './Add_Clients';
 
 class Supply extends React.Component {
     render() {
@@ -26,9 +27,10 @@ class Supply extends React.Component {
                         </Link>
                     </button>
                     <Switch>
-                        <Route path='/supply/clients' component={SupplyClients} />
-                        <Route path='/supply/products' component={SupplyProducts} />
-                        <Route path='/supply/invoices' component={SupplyInvoices} />
+                        <Route exact path='/supply/clients' component={SupplyClients} />
+                        <Route exact path='/supply/products' component={SupplyProducts} />
+                        <Route exact path='/supply/invoices' component={SupplyInvoices} />
+                        {/* <Route exact path='/supply/add_clients' component={Add_Clients} /> */}
                     </Switch>
                 </div>
             </Router>

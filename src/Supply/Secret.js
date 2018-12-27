@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 class Secret extends React.Component {
@@ -14,8 +15,7 @@ class Secret extends React.Component {
     }
     CheckSecretCode(obj, e) {
         if (obj.code === obj.state.code) {
-            let path = `/supply`;
-            this.props.history.push(path)
+            window.location = '/supply';
         } else {
             alert('Invalid Code');
         }
@@ -25,7 +25,6 @@ class Secret extends React.Component {
             <div>
                 <input type="text" placeholder='Submit Secret Code' value={this.state.code} onChange={this.SubmittedCode.bind(this)} />
                 <br />
-                <h4>{this.state.code}</h4>
                 <input type={'submit'} onClick={this.CheckSecretCode.bind(this, this)} />
             </div>
         )

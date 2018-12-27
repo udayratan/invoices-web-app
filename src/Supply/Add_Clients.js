@@ -43,18 +43,47 @@ class Add_Clients extends React.Component {
     render() {
         return (
             <div className="center">
-                <label style={{ marginTop: '5%' }}>Name</label>
-                <input style={{ marginLeft: '10px' }} type="text" value={this.state.Name} onChange={this.Name_Changed.bind(this)} />
-
-                <label>PhoneNumber</label>
-                <input style={{ marginLeft: '10px' }} type="text" value={this.state.PhoneNumber} onChange={this.PhoneNumber_Changed.bind(this)} />
-
-                <label>EmailID</label>
-                <input style={{ marginLeft: '10px' }} type="text" value={this.state.EmailID} onChange={this.EmailID_Changed.bind(this)} />
-
-                <label>GST_Number</label>
-                <input style={{ marginLeft: '10px' }} type="text" value={this.state.GST_Number} onChange={this.GST_Number_Changed.bind(this)} />
-                <br /><input type={'submit'} onClick={this.Add_Client_Function.bind(this, this)} />
+                <table className="AddForm">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label>Name</label>
+                            </td>
+                            <td>
+                                <input style={{ marginLeft: '10px' }} type="text" value={this.state.Name} onChange={this.Name_Changed.bind(this)} />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>PhoneNumber</label>
+                            </td>
+                            <td>
+                                <input style={{ marginLeft: '10px' }} type="text" value={this.state.PhoneNumber} onChange={this.PhoneNumber_Changed.bind(this)} />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>EmailID</label>
+                            </td>
+                            <td>
+                                <input style={{ marginLeft: '10px' }} type="text" value={this.state.EmailID} onChange={this.EmailID_Changed.bind(this)} />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>GST_Number</label>
+                            </td>
+                            <td>
+                                <input style={{ marginLeft: '10px' }} type="text" value={this.state.GST_Number} onChange={this.GST_Number_Changed.bind(this)} />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colSpan='2' style={{ marginTop: '15px', marginLeft: '70px', position: 'absolute' }}>
+                                <input className="Submit" type={'submit'} onClick={this.Add_Client_Function.bind(this, this)} />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         )
     }
