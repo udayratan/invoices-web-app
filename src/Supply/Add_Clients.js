@@ -55,7 +55,7 @@ class Add_Clients extends React.Component {
                         </tr>
                         <tr>
                             <td>
-                                <label>PhoneNumber</label>
+                                <label>Phone Number</label>
                             </td>
                             <td>
                                 <input style={{ marginLeft: '10px' }} type="text" value={this.state.PhoneNumber} onChange={this.PhoneNumber_Changed.bind(this)} />
@@ -63,7 +63,7 @@ class Add_Clients extends React.Component {
                         </tr>
                         <tr>
                             <td>
-                                <label>EmailID</label>
+                                <label>Email ID</label>
                             </td>
                             <td>
                                 <input style={{ marginLeft: '10px' }} type="text" value={this.state.EmailID} onChange={this.EmailID_Changed.bind(this)} />
@@ -71,7 +71,7 @@ class Add_Clients extends React.Component {
                         </tr>
                         <tr>
                             <td>
-                                <label>GST_Number</label>
+                                <label>GST Number</label>
                             </td>
                             <td>
                                 <input style={{ marginLeft: '10px' }} type="text" value={this.state.GST_Number} onChange={this.GST_Number_Changed.bind(this)} />

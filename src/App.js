@@ -21,7 +21,7 @@ class App extends React.Component {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/secret">Suppliers</Link>
+              <Link to="/supply">Suppliers</Link>
             </li>
             <li>
               <Link to="/login">Clients</Link>
